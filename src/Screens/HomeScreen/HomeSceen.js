@@ -1,13 +1,20 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 import HomeStyle from './HomeStyle';
 
-const HomeScreen = () => {
+
+const HomeScreen = ({navigation}) => {
   return (
     <View style={HomeStyle.container}>
 
-      <Text>Home Screen</Text>
-   
+      <View style={HomeStyle.header}>
+        <View style={HomeStyle.Profile}>
+          
+        </View>
+        <View style={HomeStyle.Options}>
+
+        </View>
+      </View>
 
     </View>
   );
