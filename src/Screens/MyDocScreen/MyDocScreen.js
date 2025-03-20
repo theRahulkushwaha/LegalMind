@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text , Button} from 'react-native';
-import ChatStyle from './MyDocStyle';
+import MyDocsStyle from './MyDocStyle';
 
 const MyDocScreen = ({navigation}) =>{
     return(
-        <View>
+        <View style={MyDocsStyle.container}>
             <Text> MyDocScreen</Text>
 
             <Button

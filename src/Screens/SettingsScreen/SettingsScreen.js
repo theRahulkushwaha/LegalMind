@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text , Button} from 'react-native';
-import ChatStyle from './SettingsStyle';
+import SettingsStyle from './SettingsStyle';
 
 const SettingsScreen = ({navigation}) =>{
     return(
-        <View>
+        <View style={SettingsStyle.container}>
             <Text>SettingsScreen</Text>
 
             <Button

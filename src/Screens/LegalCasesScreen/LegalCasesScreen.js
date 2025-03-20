@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text,  Button} from 'react-native';
-import ChatStyle from './LegalCasesStyle';
+import LegalCasesStyle from './LegalCasesStyle';
 
 const LegalCasesScreen = ({navigation}) =>{
     return(
-        <View>
+        <View style={LegalCasesStyle.container}>
             <Text>Legal Cases Screen</Text>
 
             <Button

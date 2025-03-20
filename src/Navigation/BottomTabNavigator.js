@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -13,34 +14,51 @@ import StackNavigator from './StackNavigator';
 
 const Tab = createBottomTabNavigator();
 
+const homeIcon = require('../Assets/Icons/home.png');
+const chatIcon = require('../Assets/Icons/bot.png');
+const legalCasesIcon = require('../Assets/Icons/legal.png');
+const myDocsIcon = require('../Assets/Icons/docs.png');
+const settingsIcon = require('../Assets/Icons/setting.png');
+
+
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarIcon: ({ color, size }) => {
-          let iconName;
+        tabBarIcon: ({ focused }) => {
+          let iconSource;
 
           switch (route.name) {
             case 'HomeTab':
-              iconName = 'home-outline';
+              iconSource = homeIcon;
               break;
             case 'Chat':
-              iconName = 'chatbubble-outline';
+              iconSource = chatIcon;
               break;
             case 'LegalCases':
-              iconName = 'briefcase-outline';
+              iconSource = legalCasesIcon;
               break;
             case 'MyDocs':
-              iconName = 'document-text-outline';
+              iconSource = myDocsIcon;
               break;
             case 'Settings':
-              iconName = 'settings-outline';
+              iconSource = settingsIcon;
               break;
             default:
-              iconName = 'help-circle-outline';
+              iconSource = homeIcon;
           }
 
-          return <Ionicons name={iconName} size={size} color={color} />;
+          return (
+            <Image
+              source={iconSource}
+              style={{
+                width: 24,
+                height: 24,
+                tintColor: focused ? 'blue' : 'gray', // Change color on focus
+              }}
+              resizeMode="contain"
+            />
+          );
         },
         tabBarActiveTintColor: 'blue',
         tabBarInactiveTintColor: 'gray',
