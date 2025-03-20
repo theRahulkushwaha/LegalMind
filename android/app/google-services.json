@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "997273942940",
+    "project_id": "legalmind-da148",
+    "storage_bucket": "legalmind-da148.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997273942940:android:294fcc600bd80ea661e659",
+        "android_client_info": {
+          "package_name": "com.legalmind"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVFd1zbmLt6AaqsYxqjpcKLwfGAYG4pz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

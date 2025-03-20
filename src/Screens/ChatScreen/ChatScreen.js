@@ -9,7 +9,8 @@ const ChatScreen = ({navigation}) =>{
 
             <Button
                     title="Go to Something"
-                    onPress={() => navigation.navigate('Something')}
+                    onPress={() => navigation.navigate('HomeTab', { screen: 'Something' })}
+
                   /> 
         </View>
     )
