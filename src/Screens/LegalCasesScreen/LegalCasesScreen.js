@@ -1,105 +1,32 @@
-import React from 'react';
-import {View, Text, Button, TouchableOpacity, Image} from 'react-native';
-import LegalCasesStyle from './LegalCasesStyle';
+import React from "react";
+import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
+import LegalCasesStyle from "./LegalCasesStyle";
 
 
-// const homeIcon = require('../Assets/Icons/home.png');
+const legalCases = [
+  { title: "Family Law", image: require("../../Assets/LeagalCasesIcons/family_18927844.png") },
+  { title: "Criminal Law", image: require("../../Assets/LeagalCasesIcons/prisoner_7211462.png") },
+  { title: "Real Estate Law", image: require("../../Assets/LeagalCasesIcons/construction_15400054.png") },
+  { title: "Employment Law", image: require("../../Assets/LeagalCasesIcons/computer-worker.png") },
+  { title: "Business Law", image: require("../../Assets/LeagalCasesIcons/meeting.png") },
+  { title: "Injury Law", image: require("../../Assets/LeagalCasesIcons/injury.png") },
+  { title: "Immigration Law", image: require("../../Assets/LeagalCasesIcons/icons8-immigration-40.png") },
+  { title: "Intellectual Property", image: require("../../Assets/LeagalCasesIcons/intellectual-property.png") },
+  { title: "Bankruptcy Law", image: require("../../Assets/LeagalCasesIcons/bank.png") },
+  { title: "Healthcare Law", image: require("../../Assets/LeagalCasesIcons/healthcare.png") },
+];
 
-const LegalCasesScreen = ({navigation}) => {
+const LegalCasesScreen = ({ navigation }) => {
   return (
     <View style={LegalCasesStyle.container}>
-      <View style={LegalCasesStyle.boxWrap}>
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-          <Image
-            source={require('../../Assets/LeagalCasesIcons/family_18927844.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Family Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/prisoner_7211462.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Criminal Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/construction_15400054.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Real Estate Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/computer-worker.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Employment Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/meeting.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>BUsiness Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/injury.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Injury Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/icons8-immigration-40.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Immigration Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/intellectual-property.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Intellectual Property Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/bank.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Bankruptcy Law</Text>
-        </TouchableOpacity>
-
-
-        <TouchableOpacity style={LegalCasesStyle.LegalBox}>
-        <Image
-            source={require('../../Assets/LeagalCasesIcons/healthcare.png')}
-            style= {LegalCasesStyle.BoxImg}
-          />
-            <Text style={LegalCasesStyle.BoxText}>Healthcare Law</Text>
-        </TouchableOpacity>
-
-
-      </View>
+      <ScrollView contentContainerStyle={LegalCasesStyle.boxWrap}>
+        {legalCases.map((item, index) => (
+          <TouchableOpacity key={index} style={LegalCasesStyle.LegalBox}>
+            <Image source={item.image} style={LegalCasesStyle.BoxImg} />
+            <Text style={LegalCasesStyle.BoxText}>{item.title}</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
     </View>
   );
 };
