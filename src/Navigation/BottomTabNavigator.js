@@ -65,10 +65,10 @@ const BottomTabNavigator = () => {
         tabBarStyle: { backgroundColor: '#020b1c', height: 65 }
       })}
     >
-      <Tab.Screen name="HomeTab" component={StackNavigator} options={{ headerShown: false }} />
+      <Tab.Screen name="HomeTab" component={StackNavigator} options={{ headerShown: false , headerStyle:{ backgroundColor:'#020b1c'}}}  />
       <Tab.Screen name="Chat" component={ChatScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="LegalCases" component={LegalCasesScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="MyDocs" component={MyDocScreen} options={{ headerShown: false }} />
+      <Tab.Screen name="LegalCases" component={LegalCasesScreen} options={{ headerShown: true, headerStyle:{ backgroundColor:'#020b1c', }, headerTintColor:'white',   }} />
+      <Tab.Screen name="MyDocs" component={MyDocScreen} options ={{headerStyle:{ backgroundColor:'#020b1c'}, headerTintColor:'white',  }} />
       <Tab.Screen name="Settings" component={SettingsScreen} options={{ headerShown: false }} />
     </Tab.Navigator>
   );

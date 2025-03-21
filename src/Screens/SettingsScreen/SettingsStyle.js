@@ -11,7 +11,8 @@ const SettingsStyle = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
-        marginBottom: 20,
+        marginBottom: 30,
+
     },
     profileImage: {
         width: 100,
@@ -20,7 +21,7 @@ const SettingsStyle = StyleSheet.create({
         marginBottom: 10,
     },
     username: {
-        fontSize: 20,
+        fontSize: 40,
         fontWeight: 'bold',
         color: '#fff',
     },
@@ -30,13 +31,14 @@ const SettingsStyle = StyleSheet.create({
         marginBottom: 20,
     },
     imageBox: {
-        width: '90%',
+        width: 150,
         height: 150,
         backgroundColor: '#222',
-        borderRadius: 10,
+        borderRadius: "100%",
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: 20,
+        
     },
     imageBoxText: {
         color: '#777',
@@ -47,8 +49,9 @@ const SettingsStyle = StyleSheet.create({
         backgroundColor: '#222',
         padding: 15,
         borderRadius: 10,
-        marginVertical: 5,
+        marginVertical: 10,
         alignItems: 'center',
+        
     },
     optionText: {
         color: '#fff',

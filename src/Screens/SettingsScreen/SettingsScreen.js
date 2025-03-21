@@ -17,7 +17,7 @@ const SettingsScreen = () => {
         try {
             await auth().signOut();
             Alert.alert('Logged Out', 'You have been logged out successfully.');
-            navigation.replace('Login'); // Ensure 'Login' is in your navigation stack
+            navigation.replace('Login'); 
         } catch (error) {
             Alert.alert('Error', error.message);
         }
@@ -31,12 +31,12 @@ const SettingsScreen = () => {
                 source={user?.photoURL ? { uri: user.photoURL } : require('../../assets/profile.png')} 
                 style={SettingsStyle.profileImage} 
             /> */}
-            <Text style={SettingsStyle.username}>{user?.displayName || 'AI Legal Advisor'}</Text>
+            <Text style={SettingsStyle.username}>{user?.displayName || 'LegalMind'}</Text>
             <Text style={SettingsStyle.email}>{user?.email || '--'}</Text>
 
             {/* Image Box - You can add images here later */}
             <View style={SettingsStyle.imageBox}>
-                <Text style={SettingsStyle.imageBoxText}>Add Images Here</Text>
+                <Text style={SettingsStyle.imageBoxText}>Profile Photo</Text>
             </View>
 
             {/* Settings Options */}

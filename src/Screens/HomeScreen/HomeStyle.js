@@ -1,123 +1,116 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 const HomeStyle = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#020b1c',
-    alignItems: 'center',
-    // justifyContent: 'center',
+    backgroundColor: "#020b1c",
+    alignItems: "center",
   },
 
   header: {
-    height: '10%',
-    width: '100%',
-    // backgroundColor: 'blue',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    height: "10%",
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginTop: 10,
-    alignItems: 'center',
-
+    alignItems: "center",
+    paddingHorizontal: 15,
   },
 
   Profile: {
-      height:'90%',
-      width: '15%',
-      padding: 5,
-      margin: 5,
-      marginLeft: 15,
+    height: 50,
+    width: 50,
+    padding: 5,
+    borderRadius: 25,
   },
 
   Options: {
-      height:'80%',
-      width: '20%',
-      padding:20,
-      margin: 5,
-
-
+    height: 40,
+    width: 40,
+    padding: 10,
   },
 
   chat: {
-    // backgroundColor: 'red',
-    height: '20%',
-    width: '100%',
-    margin: 10,
-    padding: 10,
-    // alignItems: 'center',
-    justifyContent: 'center',
+    width: "100%",
+    marginTop: 10,
+    paddingHorizontal: 15,
   },
 
   chatText: {
-    color: 'white',
-    margin : 10,
+    color: "white",
     fontSize: 18,
+    marginBottom: 10,
   },
 
   chatInput: {
-    backgroundColor: 'white',
-    width: '98%',
-    height: '50%',
+    backgroundColor: "white",
+    width: "100%",
+    height: 50,
     borderRadius: 10,
-    margin: 10,
+    paddingHorizontal: 10,
+    fontSize: 16,
   },
 
-  OurServicesContainer:{
-    height: '25%',
-    width: '100%',
-    padding: 10,
-    // backgroundColor: 'blue',
+  OurServicesContainer: {
+    marginTop: 20,
+    width: "100%",
+    paddingHorizontal: 15,
   },
-  OurServicesText: {  
-    color: 'white',
-    margin: 10,
+
+  OurServicesText: {
+    color: "white",
     fontSize: 18,
+    marginBottom: 10,
   },
 
-  OurServices: {
-    // backgroundColor: 'green',
-    height: '100%',
-    width: '100%',
-    padding: 2,
+  scrollContent: {
+    flexGrow: 1,
+    paddingHorizontal: 5,
   },
 
   OurServicesBox: {
-    height: '95%',
+    height: 130,
     width: 110,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 10,
-    margin: 5,
-  },
-
-  RecentDocContainer:{
-    // backgroundColor: 'red',
-    height: '45%',
-    width: '100%',
+    marginHorizontal: 5,
+    justifyContent: "center",
+    alignItems: "center",
     padding: 10,
   },
 
-  RecentDocText:{
-    color: 'white',
-    margin: 10,
+  BoxImg: {
+    width: 70,
+    height: 70,
+    resizeMode: "contain",
+    marginBottom: 5,
+  },
+
+  BoxText: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#333",
+  },
+
+  RecentDocContainer: {
+    marginTop: 20,
+    width: "100%",
+    paddingHorizontal: 15,
+  },
+
+  RecentDocText: {
+    color: "white",
     fontSize: 18,
+    marginBottom: 10,
   },
 
-  RecentDoc:{
-    height: '100%',
-    width: '100%',
-    padding: 2,
-    // backgroundColor: 'green',
-  },
-
-  RecentDocBox:{
-    height: '40%',
-    width: 110,
-    backgroundColor: 'white',
+  RecentDocBox: {
+    height: 120,
+    width: 100,
+    backgroundColor: "white",
     borderRadius: 10,
-    margin: 5
+    marginHorizontal: 5,
   },
-
-
- 
-
 });
 
 export default HomeStyle;

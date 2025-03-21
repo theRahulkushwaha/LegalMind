@@ -5,8 +5,24 @@ const MyDocsStyle = StyleSheet.create({
         flex:1,
         backgroundColor: '#020b1c',
         justifyContent:'center',
-        alignItems:'center'
-    }
+        alignItems:'center',  
+    },
+
+    Border:{
+        borderColor:'white',
+        borderWidth:1, 
+        height:'85%',
+        width:'94%',
+        borderRadius:10
+    },
+
+    scroll:{
+        borderColor:'white',
+        borderWidth:1, 
+        height:'20%',
+        width:'94%',
+        borderRadius:10
+    },
 
 })
 

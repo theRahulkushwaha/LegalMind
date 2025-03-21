@@ -1,16 +1,23 @@
 import React from 'react';
 import {View, Text , Button} from 'react-native';
 import MyDocsStyle from './MyDocStyle';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const MyDocScreen = ({navigation}) =>{
     return(
         <View style={MyDocsStyle.container}>
-            <Text> MyDocScreen</Text>
+            
+            <View style={MyDocsStyle.Border}>
+                
+            </View>
 
-            <Button
-                    title="Go to Something"
-                    onPress={() => navigation.navigate('Something')}
-                  /> 
+            {/* <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            style={MyDocsStyle.scroll}>
+            </ScrollView>
+             */}
+
         </View>
     )
 };
